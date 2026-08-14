@@ -1,9 +1,10 @@
 from pathlib import Path
+import argparse_test
 
 # ------------------------------ Listing every file in a directory
 
-# p1 = Path(r"S:\Elektronik\E2\E2V1\E2V1P\E2V1P_Products\NEDAP\07_AV\02_BoxBuild\02_PxN")
-p1 = Path(r"D:\Szakdoga_copy")
+p1 = Path(r"S:\Elektronik\E2\E2V1\E2V1P\E2V1P_Products\NEDAP\07_AV\02_BoxBuild\02_PxN\02_PxN_copy")
+# p1 = Path(r"D:\Szakdoga_copy")
 files = [p for p in p1.rglob("*") if p.is_file()]
 
 # ------------------------------ Grouping files by extensions
@@ -16,12 +17,12 @@ for file in files:
     else:
         grouped_files[file.suffix] = [file.stem]
 
-# ------------------------------ Creating a folder for each extension (commented out, only need it once)
+# ------------------------------ Creating a folder for each extension
 
-# for key in grouped_files:
-#     new_dir = p1 / f"{key}"
-#     new_dir.mkdir(parents=True, exist_ok=True)
-#
+for key in grouped_files:
+    new_dir = p1 / f"{key}"
+    new_dir.mkdir(parents=True, exist_ok=True)
+
 
 # ------------------------------ Moving files with different extensions into their respective folder
 
