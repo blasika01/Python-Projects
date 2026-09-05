@@ -1,5 +1,4 @@
 from pathlib import Path
-import argparse_test
 
 # ------------------------------ Listing every file in a directory
 

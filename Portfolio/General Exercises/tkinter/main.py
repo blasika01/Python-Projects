@@ -1,4 +1,13 @@
+
+
+# !!!! There is an intentional bug with the "text_entry" function that is fixed in the tkinter practice with classes !!!!
+
+
+
+
 import tkinter as tk
+
+#changes the looks of the components depending on the os.
 from tkinter import ttk
 
 # Creating the main window and giving it a title.
